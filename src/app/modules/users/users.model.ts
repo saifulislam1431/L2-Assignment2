@@ -109,7 +109,7 @@ userSchema.methods.toJSON = function(){
     return TheObject;
 }
 
-userSchema.statics.isUserExists = async function(userId: number | string){
+userSchema.statics.isUserExist = async function(userId: number | string){
     const existsUser = await user.findOne({userId});
     return existsUser;
 }

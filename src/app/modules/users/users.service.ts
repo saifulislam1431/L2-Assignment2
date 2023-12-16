@@ -18,6 +18,8 @@ const getAllUsers =  async()=>{
 // Single user
 
 const getSingleUser = async(userId: number | string)=>{
+    // console.log(userId);
+    
     const existsUser = await user.isUserExist(userId);
     if(!existsUser){
         throw new Error("User not found!")
